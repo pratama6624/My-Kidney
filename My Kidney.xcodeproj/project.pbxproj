@@ -51,9 +51,13 @@
 		417A6D0B2C496CD900AA6408 /* My Kidney */ = {
 			isa = PBXGroup;
 			children = (
-				417A6D0C2C496CD900AA6408 /* My_KidneyApp.swift */,
-				417A6D0E2C496CD900AA6408 /* ContentView.swift */,
-				417A6D102C496CDB00AA6408 /* Assets.xcassets */,
+				417A6D202C49793900AA6408 /* App */,
+				417A6D1F2C49792E00AA6408 /* Resources */,
+				417A6D1E2C49791A00AA6408 /* Utilities */,
+				417A6D1D2C49790B00AA6408 /* Services */,
+				417A6D1C2C4978FF00AA6408 /* Models */,
+				417A6D1B2C4978F300AA6408 /* Views */,
+				417A6D1A2C4978E900AA6408 /* ViewModels */,
 				417A6D122C496CDB00AA6408 /* Preview Content */,
 			);
 			path = "My Kidney";
@@ -63,8 +67,60 @@
 			isa = PBXGroup;
 			children = (
 				417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */,
+				417A6D102C496CDB00AA6408 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		417A6D1A2C4978E900AA6408 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		417A6D1B2C4978F300AA6408 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		417A6D1C2C4978FF00AA6408 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		417A6D1D2C49790B00AA6408 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		417A6D1E2C49791A00AA6408 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		417A6D1F2C49792E00AA6408 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		417A6D202C49793900AA6408 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				417A6D0C2C496CD900AA6408 /* My_KidneyApp.swift */,
+				417A6D0E2C496CD900AA6408 /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
