@@ -11,6 +11,10 @@
 		417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D0E2C496CD900AA6408 /* ContentView.swift */; };
 		417A6D112C496CDB00AA6408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D102C496CDB00AA6408 /* Assets.xcassets */; };
 		417A6D142C496CDB00AA6408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */; };
+		417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D212C497A6C00AA6408 /* EventModel.swift */; };
+		417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D232C497A9400AA6408 /* ExpertSystemModel.swift */; };
+		417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D252C497AB800AA6408 /* RuleModel.swift */; };
+		417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D272C497AE000AA6408 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		417A6D0E2C496CD900AA6408 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		417A6D102C496CDB00AA6408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		417A6D212C497A6C00AA6408 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		417A6D232C497A9400AA6408 /* ExpertSystemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertSystemModel.swift; sourceTree = "<group>"; };
+		417A6D252C497AB800AA6408 /* RuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleModel.swift; sourceTree = "<group>"; };
+		417A6D272C497AE000AA6408 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,10 @@
 		417A6D1C2C4978FF00AA6408 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D212C497A6C00AA6408 /* EventModel.swift */,
+				417A6D232C497A9400AA6408 /* ExpertSystemModel.swift */,
+				417A6D252C497AB800AA6408 /* RuleModel.swift */,
+				417A6D272C497AE000AA6408 /* ViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */,
+				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
+				417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */,
+				417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
