@@ -32,6 +32,15 @@
 		417A6D492C49F19500AA6408 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D482C49F19500AA6408 /* GoogleService-Info.plist */; };
 		417A6D4C2C49F21C00AA6408 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D4B2C49F21C00AA6408 /* GoogleSignIn */; };
 		417A6D4E2C49F21C00AA6408 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D4D2C49F21C00AA6408 /* GoogleSignInSwift */; };
+		417A6D512C49F44C00AA6408 /* AdviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D502C49F44C00AA6408 /* AdviceService.swift */; };
+		417A6D532C49F47700AA6408 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D522C49F47700AA6408 /* AuthServices.swift */; };
+		417A6D552C49F49D00AA6408 /* ConsultationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D542C49F49D00AA6408 /* ConsultationService.swift */; };
+		417A6D572C49F4B800AA6408 /* DiagnosisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D562C49F4B800AA6408 /* DiagnosisService.swift */; };
+		417A6D592C49F4D600AA6408 /* DiseaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D582C49F4D600AA6408 /* DiseaseService.swift */; };
+		417A6D5B2C49F4F200AA6408 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D5A2C49F4F200AA6408 /* EventService.swift */; };
+		417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D5C2C49F51500AA6408 /* ExpertSystemService.swift */; };
+		417A6D5F2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D5E2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift */; };
+		417A6D612C49F59800AA6408 /* SymptomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D602C49F59800AA6408 /* SymptomService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +65,15 @@
 		417A6D3B2C49EB2200AA6408 /* SymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomViewModel.swift; sourceTree = "<group>"; };
 		417A6D482C49F19500AA6408 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		417A6D4F2C49F27300AA6408 /* My-Kidney-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "My-Kidney-Info.plist"; sourceTree = SOURCE_ROOT; };
+		417A6D502C49F44C00AA6408 /* AdviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceService.swift; sourceTree = "<group>"; };
+		417A6D522C49F47700AA6408 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		417A6D542C49F49D00AA6408 /* ConsultationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationService.swift; sourceTree = "<group>"; };
+		417A6D562C49F4B800AA6408 /* DiagnosisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisService.swift; sourceTree = "<group>"; };
+		417A6D582C49F4D600AA6408 /* DiseaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseService.swift; sourceTree = "<group>"; };
+		417A6D5A2C49F4F200AA6408 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		417A6D5C2C49F51500AA6408 /* ExpertSystemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertSystemService.swift; sourceTree = "<group>"; };
+		417A6D5E2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAnotherPlatformService.swift; sourceTree = "<group>"; };
+		417A6D602C49F59800AA6408 /* SymptomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +172,15 @@
 		417A6D1D2C49790B00AA6408 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D502C49F44C00AA6408 /* AdviceService.swift */,
+				417A6D522C49F47700AA6408 /* AuthServices.swift */,
+				417A6D542C49F49D00AA6408 /* ConsultationService.swift */,
+				417A6D562C49F4B800AA6408 /* DiagnosisService.swift */,
+				417A6D582C49F4D600AA6408 /* DiseaseService.swift */,
+				417A6D5A2C49F4F200AA6408 /* EventService.swift */,
+				417A6D5C2C49F51500AA6408 /* ExpertSystemService.swift */,
+				417A6D5E2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift */,
+				417A6D602C49F59800AA6408 /* SymptomService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -268,18 +295,27 @@
 				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D342C49EA5800AA6408 /* EventViewModel.swift in Sources */,
 				417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */,
+				417A6D572C49F4B800AA6408 /* DiagnosisService.swift in Sources */,
 				417A6D302C49E9EC00AA6408 /* DiagnosisViewModel.swift in Sources */,
 				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
+				417A6D5B2C49F4F200AA6408 /* EventService.swift in Sources */,
 				417A6D2E2C49E9CA00AA6408 /* ConsultationVewModel.swift in Sources */,
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
+				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
+				417A6D552C49F49D00AA6408 /* ConsultationService.swift in Sources */,
+				417A6D5F2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift in Sources */,
 				417A6D2C2C49E99C00AA6408 /* AuthViewModel.swift in Sources */,
+				417A6D512C49F44C00AA6408 /* AdviceService.swift in Sources */,
 				417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */,
 				417A6D382C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift in Sources */,
 				417A6D3A2C49EB0300AA6408 /* SymptomQuestionViewModel.swift in Sources */,
 				417A6D322C49EA2F00AA6408 /* DiseaseViewModel.swift in Sources */,
 				417A6D2A2C49E89E00AA6408 /* AdviceViewModel.swift in Sources */,
+				417A6D612C49F59800AA6408 /* SymptomService.swift in Sources */,
+				417A6D532C49F47700AA6408 /* AuthServices.swift in Sources */,
 				417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */,
+				417A6D592C49F4D600AA6408 /* DiseaseService.swift in Sources */,
 				417A6D362C49EA8A00AA6408 /* LoadViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
