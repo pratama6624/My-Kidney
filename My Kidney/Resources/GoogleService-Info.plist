@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>902225675920-i6s6jdg7hgn3heocjnqpgc4vnhuaa0kr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.902225675920-i6s6jdg7hgn3heocjnqpgc4vnhuaa0kr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDDmF6DUj3sALjYRy0pp4nxj-2gJL76vx0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>902225675920</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Pratama-Center.My-Kidney</string>
+	<key>PROJECT_ID</key>
+	<string>my-kidney-90494</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-kidney-90494.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:902225675920:ios:61670cc1be0562669fba15</string>
+</dict>
+</plist>

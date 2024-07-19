@@ -25,6 +25,13 @@
 		417A6D382C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D372C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift */; };
 		417A6D3A2C49EB0300AA6408 /* SymptomQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D392C49EB0300AA6408 /* SymptomQuestionViewModel.swift */; };
 		417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D3B2C49EB2200AA6408 /* SymptomViewModel.swift */; };
+		417A6D412C49EEC700AA6408 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D402C49EEC700AA6408 /* FirebaseAuth */; };
+		417A6D432C49EEC700AA6408 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D422C49EEC700AA6408 /* FirebaseFirestore */; };
+		417A6D452C49EEC700AA6408 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D442C49EEC700AA6408 /* FirebaseFirestoreSwift */; };
+		417A6D472C49EEC700AA6408 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D462C49EEC700AA6408 /* FirebaseStorage */; };
+		417A6D492C49F19500AA6408 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D482C49F19500AA6408 /* GoogleService-Info.plist */; };
+		417A6D4C2C49F21C00AA6408 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D4B2C49F21C00AA6408 /* GoogleSignIn */; };
+		417A6D4E2C49F21C00AA6408 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 417A6D4D2C49F21C00AA6408 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +54,8 @@
 		417A6D372C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAnotherPlatformViewModel.swift; sourceTree = "<group>"; };
 		417A6D392C49EB0300AA6408 /* SymptomQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomQuestionViewModel.swift; sourceTree = "<group>"; };
 		417A6D3B2C49EB2200AA6408 /* SymptomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomViewModel.swift; sourceTree = "<group>"; };
+		417A6D482C49F19500AA6408 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		417A6D4F2C49F27300AA6408 /* My-Kidney-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "My-Kidney-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417A6D4C2C49F21C00AA6408 /* GoogleSignIn in Frameworks */,
+				417A6D412C49EEC700AA6408 /* FirebaseAuth in Frameworks */,
+				417A6D472C49EEC700AA6408 /* FirebaseStorage in Frameworks */,
+				417A6D4E2C49F21C00AA6408 /* GoogleSignInSwift in Frameworks */,
+				417A6D432C49EEC700AA6408 /* FirebaseFirestore in Frameworks */,
+				417A6D452C49EEC700AA6408 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,7 @@
 		417A6D0B2C496CD900AA6408 /* My Kidney */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D4F2C49F27300AA6408 /* My-Kidney-Info.plist */,
 				417A6D202C49793900AA6408 /* App */,
 				417A6D1F2C49792E00AA6408 /* Resources */,
 				417A6D1E2C49791A00AA6408 /* Utilities */,
@@ -152,6 +168,7 @@
 		417A6D1F2C49792E00AA6408 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D482C49F19500AA6408 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -181,6 +198,14 @@
 			dependencies = (
 			);
 			name = "My Kidney";
+			packageProductDependencies = (
+				417A6D402C49EEC700AA6408 /* FirebaseAuth */,
+				417A6D422C49EEC700AA6408 /* FirebaseFirestore */,
+				417A6D442C49EEC700AA6408 /* FirebaseFirestoreSwift */,
+				417A6D462C49EEC700AA6408 /* FirebaseStorage */,
+				417A6D4B2C49F21C00AA6408 /* GoogleSignIn */,
+				417A6D4D2C49F21C00AA6408 /* GoogleSignInSwift */,
+			);
 			productName = "My Kidney";
 			productReference = 417A6D092C496CD900AA6408 /* My Kidney.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +234,10 @@
 				Base,
 			);
 			mainGroup = 417A6D002C496CD900AA6408;
+			packageReferences = (
+				417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				417A6D4A2C49F21C00AA6408 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 417A6D0A2C496CD900AA6408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +254,7 @@
 			files = (
 				417A6D142C496CDB00AA6408 /* Preview Assets.xcassets in Resources */,
 				417A6D112C496CDB00AA6408 /* Assets.xcassets in Resources */,
+				417A6D492C49F19500AA6408 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +417,7 @@
 				DEVELOPMENT_TEAM = QAM977QT6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My-Kidney-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +447,7 @@
 				DEVELOPMENT_TEAM = QAM977QT6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My-Kidney-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +488,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+		417A6D4A2C49F21C00AA6408 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		417A6D402C49EEC700AA6408 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		417A6D422C49EEC700AA6408 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		417A6D442C49EEC700AA6408 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		417A6D462C49EEC700AA6408 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D3F2C49EEC700AA6408 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		417A6D4B2C49F21C00AA6408 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D4A2C49F21C00AA6408 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		417A6D4D2C49F21C00AA6408 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417A6D4A2C49F21C00AA6408 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 417A6D012C496CD900AA6408 /* Project object */;
 }
