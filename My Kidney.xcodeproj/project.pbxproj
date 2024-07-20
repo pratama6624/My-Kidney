@@ -44,6 +44,12 @@
 		417A6D662C4ACB3100AA6408 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D652C4ACB3100AA6408 /* ForgotPasswordView.swift */; };
 		417A6D682C4ACB5300AA6408 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D672C4ACB5300AA6408 /* LoginView.swift */; };
 		417A6D6A2C4ACB9C00AA6408 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D692C4ACB9C00AA6408 /* RegisterView.swift */; };
+		417A6D6C2C4C01FB00AA6408 /* ApplicationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D6B2C4C01FB00AA6408 /* ApplicationUtility.swift */; };
+		417A6D6E2C4C021B00AA6408 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D6D2C4C021B00AA6408 /* CustomInputView.swift */; };
+		417A6D702C4C024F00AA6408 /* CustomTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D6F2C4C024F00AA6408 /* CustomTopBarView.swift */; };
+		417A6D722C4C027800AA6408 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D712C4C027800AA6408 /* CustomTabView.swift */; };
+		417A6D742C4C029600AA6408 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D732C4C029600AA6408 /* LoadingImageView.swift */; };
+		417A6D762C4C02B400AA6408 /* LoadingMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D752C4C02B400AA6408 /* LoadingMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +86,12 @@
 		417A6D652C4ACB3100AA6408 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		417A6D672C4ACB5300AA6408 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		417A6D692C4ACB9C00AA6408 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		417A6D6B2C4C01FB00AA6408 /* ApplicationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUtility.swift; sourceTree = "<group>"; };
+		417A6D6D2C4C021B00AA6408 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		417A6D6F2C4C024F00AA6408 /* CustomTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTopBarView.swift; sourceTree = "<group>"; };
+		417A6D712C4C027800AA6408 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		417A6D732C4C029600AA6408 /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		417A6D752C4C02B400AA6408 /* LoadingMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +240,12 @@
 		417A6D632C4ACAF500AA6408 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D6B2C4C01FB00AA6408 /* ApplicationUtility.swift */,
+				417A6D6D2C4C021B00AA6408 /* CustomInputView.swift */,
+				417A6D6F2C4C024F00AA6408 /* CustomTopBarView.swift */,
+				417A6D712C4C027800AA6408 /* CustomTabView.swift */,
+				417A6D732C4C029600AA6408 /* LoadingImageView.swift */,
+				417A6D752C4C02B400AA6408 /* LoadingMessageView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -333,7 +351,10 @@
 				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
 				417A6D5B2C49F4F200AA6408 /* EventService.swift in Sources */,
 				417A6D2E2C49E9CA00AA6408 /* ConsultationVewModel.swift in Sources */,
+				417A6D6E2C4C021B00AA6408 /* CustomInputView.swift in Sources */,
+				417A6D702C4C024F00AA6408 /* CustomTopBarView.swift in Sources */,
 				417A6D662C4ACB3100AA6408 /* ForgotPasswordView.swift in Sources */,
+				417A6D762C4C02B400AA6408 /* LoadingMessageView.swift in Sources */,
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
 				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
@@ -343,12 +364,15 @@
 				417A6D512C49F44C00AA6408 /* AdviceService.swift in Sources */,
 				417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */,
 				417A6D6A2C4ACB9C00AA6408 /* RegisterView.swift in Sources */,
+				417A6D742C4C029600AA6408 /* LoadingImageView.swift in Sources */,
 				417A6D382C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift in Sources */,
 				417A6D3A2C49EB0300AA6408 /* SymptomQuestionViewModel.swift in Sources */,
 				417A6D322C49EA2F00AA6408 /* DiseaseViewModel.swift in Sources */,
 				417A6D2A2C49E89E00AA6408 /* AdviceViewModel.swift in Sources */,
 				417A6D682C4ACB5300AA6408 /* LoginView.swift in Sources */,
 				417A6D612C49F59800AA6408 /* SymptomService.swift in Sources */,
+				417A6D6C2C4C01FB00AA6408 /* ApplicationUtility.swift in Sources */,
+				417A6D722C4C027800AA6408 /* CustomTabView.swift in Sources */,
 				417A6D532C49F47700AA6408 /* AuthServices.swift in Sources */,
 				417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */,
 				417A6D592C49F4D600AA6408 /* DiseaseService.swift in Sources */,
