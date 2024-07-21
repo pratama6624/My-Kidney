@@ -54,6 +54,14 @@
 		417A6D812C4C9BF500AA6408 /* HomeAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D802C4C9BF500AA6408 /* HomeAdminView.swift */; };
 		417A6D832C4C9C1100AA6408 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D822C4C9C1100AA6408 /* NewsView.swift */; };
 		417A6D852C4C9C2900AA6408 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D842C4C9C2900AA6408 /* ReportsView.swift */; };
+		417A6D872C4C9D2200AA6408 /* AppInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D862C4C9D2200AA6408 /* AppInfoData.swift */; };
+		417A6D892C4C9D7500AA6408 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D882C4C9D7500AA6408 /* ProfileView.swift */; };
+		417A6D8B2C4C9D8D00AA6408 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D8A2C4C9D8D00AA6408 /* SettingsView.swift */; };
+		417A6D8D2C4C9DB800AA6408 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D8C2C4C9DB800AA6408 /* TabView.swift */; };
+		417A6D8F2C4C9DD800AA6408 /* TopNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D8E2C4C9DD800AA6408 /* TopNavigationView.swift */; };
+		417A6D912C4C9E1C00AA6408 /* UpdateTeleponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D902C4C9E1C00AA6408 /* UpdateTeleponView.swift */; };
+		417A6D932C4C9E4700AA6408 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D922C4C9E4700AA6408 /* UserDetailView.swift */; };
+		417A6D952C4C9EC400AA6408 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D942C4C9EC400AA6408 /* UserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +108,14 @@
 		417A6D802C4C9BF500AA6408 /* HomeAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdminView.swift; sourceTree = "<group>"; };
 		417A6D822C4C9C1100AA6408 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		417A6D842C4C9C2900AA6408 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		417A6D862C4C9D2200AA6408 /* AppInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoData.swift; sourceTree = "<group>"; };
+		417A6D882C4C9D7500AA6408 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		417A6D8A2C4C9D8D00AA6408 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		417A6D8C2C4C9DB800AA6408 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		417A6D8E2C4C9DD800AA6408 /* TopNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationView.swift; sourceTree = "<group>"; };
+		417A6D902C4C9E1C00AA6408 /* UpdateTeleponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTeleponView.swift; sourceTree = "<group>"; };
+		417A6D922C4C9E4700AA6408 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		417A6D942C4C9EC400AA6408 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +305,14 @@
 		417A6D782C4C06FD00AA6408 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D862C4C9D2200AA6408 /* AppInfoData.swift */,
+				417A6D882C4C9D7500AA6408 /* ProfileView.swift */,
+				417A6D8A2C4C9D8D00AA6408 /* SettingsView.swift */,
+				417A6D8C2C4C9DB800AA6408 /* TabView.swift */,
+				417A6D8E2C4C9DD800AA6408 /* TopNavigationView.swift */,
+				417A6D902C4C9E1C00AA6408 /* UpdateTeleponView.swift */,
+				417A6D922C4C9E4700AA6408 /* UserDetailView.swift */,
+				417A6D942C4C9EC400AA6408 /* UserProfileView.swift */,
 			);
 			path = All;
 			sourceTree = "<group>";
@@ -411,22 +435,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417A6D872C4C9D2200AA6408 /* AppInfoData.swift in Sources */,
 				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D342C49EA5800AA6408 /* EventViewModel.swift in Sources */,
 				417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */,
+				417A6D8D2C4C9DB800AA6408 /* TabView.swift in Sources */,
 				417A6D812C4C9BF500AA6408 /* HomeAdminView.swift in Sources */,
+				417A6D8B2C4C9D8D00AA6408 /* SettingsView.swift in Sources */,
 				417A6D572C49F4B800AA6408 /* DiagnosisService.swift in Sources */,
 				417A6D302C49E9EC00AA6408 /* DiagnosisViewModel.swift in Sources */,
 				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
 				417A6D5B2C49F4F200AA6408 /* EventService.swift in Sources */,
 				417A6D2E2C49E9CA00AA6408 /* ConsultationVewModel.swift in Sources */,
 				417A6D6E2C4C021B00AA6408 /* CustomInputView.swift in Sources */,
+				417A6D932C4C9E4700AA6408 /* UserDetailView.swift in Sources */,
 				417A6D702C4C024F00AA6408 /* CustomTopBarView.swift in Sources */,
 				417A6D662C4ACB3100AA6408 /* ForgotPasswordView.swift in Sources */,
 				417A6D852C4C9C2900AA6408 /* ReportsView.swift in Sources */,
 				417A6D762C4C02B400AA6408 /* LoadingMessageView.swift in Sources */,
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
 				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
+				417A6D912C4C9E1C00AA6408 /* UpdateTeleponView.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
 				417A6D552C49F49D00AA6408 /* ConsultationService.swift in Sources */,
 				417A6D5F2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift in Sources */,
@@ -440,8 +469,11 @@
 				417A6D832C4C9C1100AA6408 /* NewsView.swift in Sources */,
 				417A6D7F2C4C9BCB00AA6408 /* AdminSettingsView.swift in Sources */,
 				417A6D322C49EA2F00AA6408 /* DiseaseViewModel.swift in Sources */,
+				417A6D8F2C4C9DD800AA6408 /* TopNavigationView.swift in Sources */,
 				417A6D2A2C49E89E00AA6408 /* AdviceViewModel.swift in Sources */,
 				417A6D682C4ACB5300AA6408 /* LoginView.swift in Sources */,
+				417A6D952C4C9EC400AA6408 /* UserProfileView.swift in Sources */,
+				417A6D892C4C9D7500AA6408 /* ProfileView.swift in Sources */,
 				417A6D612C49F59800AA6408 /* SymptomService.swift in Sources */,
 				417A6D6C2C4C01FB00AA6408 /* ApplicationUtility.swift in Sources */,
 				417A6D722C4C027800AA6408 /* CustomTabView.swift in Sources */,
