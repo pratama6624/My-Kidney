@@ -22,126 +22,6 @@ class AuthServices {
         return result.user
     }
     
-    // Sign in with Google
-    func signInWithGoogle(completion: @escaping (Result<AuthCredential, Error>) -> Void) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-
-        // Create Google Sign In configuration object.
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-
-        // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(
-            withPresenting: ApplicationUtility.rootViewController) { signInResult, error in
-                
-                if let error = error {
-                    completion(.failure(error))
-                    return
-                }
-                
-                let x = signInResult?.user.accessToken.tokenString
-                
-                guard let signInResult = signInResult?.user,
-                      let idToken = signInResult.idToken?.tokenString else {
-                    completion(.failure(NSError(domain: "Invalid user data", code: -1, userInfo: nil)))
-                    return
-                }
-
-                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: signInResult.accessToken.tokenString)
-                completion(.success(credential))
-            }
-        }
-    }
-    
-    func firebaseLogin(with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
-        Auth.auth().signIn(with: credential) { result, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let firebaseUser = result?.user else {
-                completion(.failure(NSError(domain: "User not found", code: -1, userInfo: nil)))
-                return
-            }
-            
-            Task {
-                do {
-                    let userModel = try await saveUserToFirestore(user: firebaseUser, additionalDetails: [:])
-                    completion(.success(userModel))
-                } catch {
-                    completion(.failure(error))
-                }
-            }
-        }
-    }
-    
-    // Coba pelajari lagi untuk data flow dibagian ini
-    
-    /*
-     Ada banyak yang harus diperbaiki di bagian ini, coba nanti lihat lagi di chatGPT sesi terakhir dan cari tahu kenapa fungsi firebase
-     login tidak terbaca di AuthViewModel
-     */
-    
-    func saveUserToFirestore(user: User, additionalDetails: [String: Any]) async throws -> UserModel {
-        let userRef = Firestore.firestore().collection("users").document(user.uid)
-            
-        // Determine the userType and userDetails based on the additionalDetails
-        guard let rule = additionalDetails["rule"] as? String else {
-            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Rule not found in additionalDetails"])
-        }
-        
-        let userType: UserType
-        let userDetails: UserDetails
-        
-        switch rule {
-        case "admin":
-            guard let adminDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let admin = try? JSONDecoder().decode(Admin.self, from: adminDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode admin details"])
-            }
-            userType = .admin
-            userDetails = .admin(admin)
-            
-        case "patient":
-            guard let patientDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let patient = try? JSONDecoder().decode(Patient.self, from: patientDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode patient details"])
-            }
-            userType = .patient
-            userDetails = .patient(patient)
-            
-        case "doctor":
-            guard let doctorDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let doctor = try? JSONDecoder().decode(Doctor.self, from: doctorDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode doctor details"])
-            }
-            userType = .doctor
-            userDetails = .doctor(doctor)
-            
-        default:
-            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown rule type"])
-        }
-        
-        // Prepare data to be saved
-        let userData: [String: Any] = [
-            "email": user.email ?? "",
-            "userType": userType.rawValue,
-            "userDetails": additionalDetails
-        ]
-        
-        // Save data to Firestore
-        try await userRef.setData(userData)
-        
-        // Return the UserModel
-        return UserModel(
-            id: user.uid,
-            email: user.email ?? "",
-            userType: userType,
-            userDetails: userDetails
-        )
-    }
-    
     func register(withEmail email: String, fullname: String, password: String, userType: UserType, additionalDetails: [String: Any]) async throws -> Firebase.User {
         let result = try await Auth.auth().createUser(withEmail: email, password: password)
         let userDetails: [String: Any] = ["email": email, "userType": userType.rawValue, "userDetails": additionalDetails]
@@ -207,7 +87,130 @@ class AuthServices {
         } else {
             throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "userDetails not found"])
         }
+    }
+    
+    // Sign in with Google
+    func signInWithGoogle(completion: @escaping (Result<GIDGoogleUser, Error>) -> Void) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(
+            withPresenting: ApplicationUtility.rootViewController) { signInResult, error in
+                
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+//                guard let signInResult = signInResult?.user,
+//                      let idToken = signInResult.idToken?.tokenString else {
+//                    completion(.failure(NSError(domain: "Invalid user data", code: -1, userInfo: nil)))
+//                    return
+//                }
+//
+//                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: signInResult.accessToken.tokenString)
+//                completion(.success(credential))
+                
+                guard let user = signInResult?.user else {
+                    completion(.failure(NSError(domain: "User not found", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to get user"])))
+                    return
+                }
+                
+                completion(.success(user))
+            }
+    }
+    
+    func firebaseLogin(with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
+        Auth.auth().signIn(with: credential) { result, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let firebaseUser = result?.user else {
+                completion(.failure(NSError(domain: "User not found", code: -1, userInfo: nil)))
+                return
+            }
+            
+            Task {
+                do {
+                    let userModel = try await self.saveUserToFirestore(user: firebaseUser, additionalDetails: [:])
+                    completion(.success(userModel))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    // Coba pelajari lagi untuk data flow dibagian ini
+    
+    /*
+     Ada banyak yang harus diperbaiki di bagian ini, coba nanti lihat lagi di chatGPT sesi terakhir dan cari tahu kenapa fungsi firebase
+     login tidak terbaca di AuthViewModel
+     */
+    
+    func saveUserToFirestore(user: User, additionalDetails: [String: Any]) async throws -> UserModel {
+        let userRef = Firestore.firestore().collection("users").document(user.uid)
         
+        // Determine the userType and userDetails based on the additionalDetails
+        guard let rule = additionalDetails["rule"] as? String else {
+            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Rule not found in additionalDetails"])
+        }
+        
+        let userType: UserType
+        let userDetails: UserDetails
+        
+        switch rule {
+        case "admin":
+            guard let adminDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
+                  let admin = try? JSONDecoder().decode(Admin.self, from: adminDetails) else {
+                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode admin details"])
+            }
+            userType = .admin
+            userDetails = .admin(admin)
+            
+        case "patient":
+            guard let patientDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
+                  let patient = try? JSONDecoder().decode(Patient.self, from: patientDetails) else {
+                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode patient details"])
+            }
+            userType = .patient
+            userDetails = .patient(patient)
+            
+        case "doctor":
+            guard let doctorDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
+                  let doctor = try? JSONDecoder().decode(Doctor.self, from: doctorDetails) else {
+                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode doctor details"])
+            }
+            userType = .doctor
+            userDetails = .doctor(doctor)
+            
+        default:
+            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown rule type"])
+        }
+        
+        // Prepare data to be saved
+        let userData: [String: Any] = [
+            "email": user.email ?? "",
+            "userType": userType.rawValue,
+            "userDetails": additionalDetails
+        ]
+        
+        // Save data to Firestore
+        try await userRef.setData(userData)
+        
+        // Return the UserModel
+        return UserModel(
+            id: user.uid,
+            email: user.email ?? "",
+            userType: userType,
+            userDetails: userDetails
+        )
     }
 }
 

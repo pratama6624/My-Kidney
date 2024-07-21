@@ -114,7 +114,7 @@ class AuthViewModel: ObservableObject {
             switch result {
             case .success(let user):
                 self?.isLoginSuccess = true
-                AuthServices.shared.firebaseLogin(credential: user.credential) { result in
+                AuthServices.shared.firebaseLogin(with: GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)) { result in
                     switch result {
                     case .success(let user):
                         self?.currentUser = user
@@ -122,7 +122,7 @@ class AuthViewModel: ObservableObject {
                         self?.errorMessage = error.localizedDescription
                     }
                 }
-                print("User signed in: \(signInResult)")
+                print("User signed in: \(result)")
             case .failure(let error):
                 self?.isLoginSuccess = false
                 self?.errorMessage = error.localizedDescription

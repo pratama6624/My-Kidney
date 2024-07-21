@@ -10,7 +10,6 @@
 		417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D0C2C496CD900AA6408 /* My_KidneyApp.swift */; };
 		417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D0E2C496CD900AA6408 /* ContentView.swift */; };
 		417A6D112C496CDB00AA6408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D102C496CDB00AA6408 /* Assets.xcassets */; };
-		417A6D142C496CDB00AA6408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */; };
 		417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D212C497A6C00AA6408 /* EventModel.swift */; };
 		417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D232C497A9400AA6408 /* ExpertSystemModel.swift */; };
 		417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D252C497AB800AA6408 /* RuleModel.swift */; };
@@ -93,6 +92,7 @@
 		417A6DCF2C4CAA3700AA6408 /* SymptomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DCE2C4CAA3700AA6408 /* SymptomFormView.swift */; };
 		417A6DD22C4CB61900AA6408 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD12C4CB61900AA6408 /* Extensions.swift */; };
 		417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */; };
+		417A6DD82C4CDA4A00AA6408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +100,6 @@
 		417A6D0C2C496CD900AA6408 /* My_KidneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_KidneyApp.swift; sourceTree = "<group>"; };
 		417A6D0E2C496CD900AA6408 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		417A6D102C496CDB00AA6408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		417A6D212C497A6C00AA6408 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		417A6D232C497A9400AA6408 /* ExpertSystemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertSystemModel.swift; sourceTree = "<group>"; };
 		417A6D252C497AB800AA6408 /* RuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleModel.swift; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 		417A6DD02C4CB0DD00AA6408 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		417A6DD12C4CB61900AA6408 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewHeightPreferenceKey.swift; sourceTree = "<group>"; };
+		417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Expert System/Forward Chaining/Sistem Pakar Penyakit Ginjal/Sistem Pakar Penyakit Ginjal/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +234,7 @@
 		417A6D122C496CDB00AA6408 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				417A6D132C496CDB00AA6408 /* Preview Assets.xcassets */,
+				417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */,
 				417A6D102C496CDB00AA6408 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -517,8 +517,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417A6D142C496CDB00AA6408 /* Preview Assets.xcassets in Resources */,
 				417A6D112C496CDB00AA6408 /* Assets.xcassets in Resources */,
+				417A6DD82C4CDA4A00AA6408 /* Preview Assets.xcassets in Resources */,
 				417A6D492C49F19500AA6408 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
