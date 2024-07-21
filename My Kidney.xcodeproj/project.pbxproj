@@ -50,6 +50,10 @@
 		417A6D722C4C027800AA6408 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D712C4C027800AA6408 /* CustomTabView.swift */; };
 		417A6D742C4C029600AA6408 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D732C4C029600AA6408 /* LoadingImageView.swift */; };
 		417A6D762C4C02B400AA6408 /* LoadingMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D752C4C02B400AA6408 /* LoadingMessageView.swift */; };
+		417A6D7F2C4C9BCB00AA6408 /* AdminSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D7E2C4C9BCB00AA6408 /* AdminSettingsView.swift */; };
+		417A6D812C4C9BF500AA6408 /* HomeAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D802C4C9BF500AA6408 /* HomeAdminView.swift */; };
+		417A6D832C4C9C1100AA6408 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D822C4C9C1100AA6408 /* NewsView.swift */; };
+		417A6D852C4C9C2900AA6408 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D842C4C9C2900AA6408 /* ReportsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		417A6D712C4C027800AA6408 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		417A6D732C4C029600AA6408 /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
 		417A6D752C4C02B400AA6408 /* LoadingMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMessageView.swift; sourceTree = "<group>"; };
+		417A6D7E2C4C9BCB00AA6408 /* AdminSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingsView.swift; sourceTree = "<group>"; };
+		417A6D802C4C9BF500AA6408 /* HomeAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdminView.swift; sourceTree = "<group>"; };
+		417A6D822C4C9C1100AA6408 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		417A6D842C4C9C2900AA6408 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +241,13 @@
 		417A6D622C4ACAD100AA6408 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D782C4C06FD00AA6408 /* All */,
+				417A6D772C4C06F500AA6408 /* Admin */,
+				417A6D7C2C4C072F00AA6408 /* SubAdmin */,
+				417A6D792C4C070700AA6408 /* Doctor */,
+				417A6D7D2C4C075A00AA6408 /* SubDoctor */,
+				417A6D7A2C4C071500AA6408 /* Patient */,
+				417A6D7B2C4C071D00AA6408 /* SubPatient */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -258,6 +273,59 @@
 				417A6D692C4ACB9C00AA6408 /* RegisterView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		417A6D772C4C06F500AA6408 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				417A6D7E2C4C9BCB00AA6408 /* AdminSettingsView.swift */,
+				417A6D802C4C9BF500AA6408 /* HomeAdminView.swift */,
+				417A6D822C4C9C1100AA6408 /* NewsView.swift */,
+				417A6D842C4C9C2900AA6408 /* ReportsView.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		417A6D782C4C06FD00AA6408 /* All */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		417A6D792C4C070700AA6408 /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Doctor;
+			sourceTree = "<group>";
+		};
+		417A6D7A2C4C071500AA6408 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		417A6D7B2C4C071D00AA6408 /* SubPatient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubPatient;
+			sourceTree = "<group>";
+		};
+		417A6D7C2C4C072F00AA6408 /* SubAdmin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubAdmin;
+			sourceTree = "<group>";
+		};
+		417A6D7D2C4C075A00AA6408 /* SubDoctor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubDoctor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +414,7 @@
 				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D342C49EA5800AA6408 /* EventViewModel.swift in Sources */,
 				417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */,
+				417A6D812C4C9BF500AA6408 /* HomeAdminView.swift in Sources */,
 				417A6D572C49F4B800AA6408 /* DiagnosisService.swift in Sources */,
 				417A6D302C49E9EC00AA6408 /* DiagnosisViewModel.swift in Sources */,
 				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
@@ -354,6 +423,7 @@
 				417A6D6E2C4C021B00AA6408 /* CustomInputView.swift in Sources */,
 				417A6D702C4C024F00AA6408 /* CustomTopBarView.swift in Sources */,
 				417A6D662C4ACB3100AA6408 /* ForgotPasswordView.swift in Sources */,
+				417A6D852C4C9C2900AA6408 /* ReportsView.swift in Sources */,
 				417A6D762C4C02B400AA6408 /* LoadingMessageView.swift in Sources */,
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
 				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
@@ -367,6 +437,8 @@
 				417A6D742C4C029600AA6408 /* LoadingImageView.swift in Sources */,
 				417A6D382C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift in Sources */,
 				417A6D3A2C49EB0300AA6408 /* SymptomQuestionViewModel.swift in Sources */,
+				417A6D832C4C9C1100AA6408 /* NewsView.swift in Sources */,
+				417A6D7F2C4C9BCB00AA6408 /* AdminSettingsView.swift in Sources */,
 				417A6D322C49EA2F00AA6408 /* DiseaseViewModel.swift in Sources */,
 				417A6D2A2C49E89E00AA6408 /* AdviceViewModel.swift in Sources */,
 				417A6D682C4ACB5300AA6408 /* LoginView.swift in Sources */,
