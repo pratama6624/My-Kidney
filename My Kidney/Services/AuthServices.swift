@@ -46,8 +46,6 @@ class AuthServices {
                 return nil
             }
             
-            let _ = snapshot.data()
-            
             let userData = try snapshot.data(as: UserModel.self)
             return userData
         } catch {
