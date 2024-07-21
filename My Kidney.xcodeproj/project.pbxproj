@@ -65,6 +65,9 @@
 		417A6D972C4CA04F00AA6408 /* ConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D962C4CA04F00AA6408 /* ConsultationView.swift */; };
 		417A6D992C4CA06700AA6408 /* PatientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D982C4CA06700AA6408 /* PatientListView.swift */; };
 		417A6D9B2C4CA08300AA6408 /* SolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D9A2C4CA08300AA6408 /* SolutionView.swift */; };
+		417A6D9D2C4CA49D00AA6408 /* ConsultationPatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D9C2C4CA49D00AA6408 /* ConsultationPatientView.swift */; };
+		417A6D9F2C4CA4BF00AA6408 /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D9E2C4CA4BF00AA6408 /* DiagnosisView.swift */; };
+		417A6DA12C4CA4D800AA6408 /* HomePatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA02C4CA4D800AA6408 /* HomePatientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +125,9 @@
 		417A6D962C4CA04F00AA6408 /* ConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationView.swift; sourceTree = "<group>"; };
 		417A6D982C4CA06700AA6408 /* PatientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListView.swift; sourceTree = "<group>"; };
 		417A6D9A2C4CA08300AA6408 /* SolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionView.swift; sourceTree = "<group>"; };
+		417A6D9C2C4CA49D00AA6408 /* ConsultationPatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationPatientView.swift; sourceTree = "<group>"; };
+		417A6D9E2C4CA4BF00AA6408 /* DiagnosisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
+		417A6DA02C4CA4D800AA6408 /* HomePatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +342,9 @@
 		417A6D7A2C4C071500AA6408 /* Patient */ = {
 			isa = PBXGroup;
 			children = (
+				417A6D9C2C4CA49D00AA6408 /* ConsultationPatientView.swift */,
+				417A6D9E2C4CA4BF00AA6408 /* DiagnosisView.swift */,
+				417A6DA02C4CA4D800AA6408 /* HomePatientView.swift */,
 			);
 			path = Patient;
 			sourceTree = "<group>";
@@ -465,11 +474,14 @@
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
 				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
 				417A6D9B2C4CA08300AA6408 /* SolutionView.swift in Sources */,
+				417A6DA12C4CA4D800AA6408 /* HomePatientView.swift in Sources */,
 				417A6D912C4C9E1C00AA6408 /* UpdateTeleponView.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
 				417A6D552C49F49D00AA6408 /* ConsultationService.swift in Sources */,
 				417A6D5F2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift in Sources */,
+				417A6D9D2C4CA49D00AA6408 /* ConsultationPatientView.swift in Sources */,
 				417A6D2C2C49E99C00AA6408 /* AuthViewModel.swift in Sources */,
+				417A6D9F2C4CA4BF00AA6408 /* DiagnosisView.swift in Sources */,
 				417A6D512C49F44C00AA6408 /* AdviceService.swift in Sources */,
 				417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */,
 				417A6D6A2C4ACB9C00AA6408 /* RegisterView.swift in Sources */,
