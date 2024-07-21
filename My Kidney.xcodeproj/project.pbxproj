@@ -91,6 +91,8 @@
 		417A6DCB2C4CA9C800AA6408 /* ProblemTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DCA2C4CA9C800AA6408 /* ProblemTipsView.swift */; };
 		417A6DCD2C4CA9E500AA6408 /* QuizAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DCC2C4CA9E500AA6408 /* QuizAnswersView.swift */; };
 		417A6DCF2C4CAA3700AA6408 /* SymptomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DCE2C4CAA3700AA6408 /* SymptomFormView.swift */; };
+		417A6DD22C4CB61900AA6408 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD12C4CB61900AA6408 /* Extensions.swift */; };
+		417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +177,8 @@
 		417A6DCC2C4CA9E500AA6408 /* QuizAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswersView.swift; sourceTree = "<group>"; };
 		417A6DCE2C4CAA3700AA6408 /* SymptomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomFormView.swift; sourceTree = "<group>"; };
 		417A6DD02C4CB0DD00AA6408 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		417A6DD12C4CB61900AA6408 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewHeightPreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,8 @@
 		417A6D1E2C49791A00AA6408 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				417A6DD12C4CB61900AA6408 /* Extensions.swift */,
+				417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -527,10 +533,12 @@
 				417A6D872C4C9D2200AA6408 /* AppInfoData.swift in Sources */,
 				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D342C49EA5800AA6408 /* EventViewModel.swift in Sources */,
+				417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */,
 				417A6D0F2C496CD900AA6408 /* ContentView.swift in Sources */,
 				417A6D8D2C4C9DB800AA6408 /* TabView.swift in Sources */,
 				417A6DC12C4CA92E00AA6408 /* DiseaseView.swift in Sources */,
 				417A6D812C4C9BF500AA6408 /* HomeAdminView.swift in Sources */,
+				417A6DD22C4CB61900AA6408 /* Extensions.swift in Sources */,
 				417A6D8B2C4C9D8D00AA6408 /* SettingsView.swift in Sources */,
 				417A6D572C49F4B800AA6408 /* DiagnosisService.swift in Sources */,
 				417A6D302C49E9EC00AA6408 /* DiagnosisViewModel.swift in Sources */,
