@@ -68,6 +68,18 @@
 		417A6D9D2C4CA49D00AA6408 /* ConsultationPatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D9C2C4CA49D00AA6408 /* ConsultationPatientView.swift */; };
 		417A6D9F2C4CA4BF00AA6408 /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6D9E2C4CA4BF00AA6408 /* DiagnosisView.swift */; };
 		417A6DA12C4CA4D800AA6408 /* HomePatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA02C4CA4D800AA6408 /* HomePatientView.swift */; };
+		417A6DA32C4CA5EA00AA6408 /* ActiveUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA22C4CA5EA00AA6408 /* ActiveUserDataView.swift */; };
+		417A6DA52C4CA61900AA6408 /* AddRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA42C4CA61900AA6408 /* AddRuleView.swift */; };
+		417A6DA72C4CA63E00AA6408 /* AdviceDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA62C4CA63E00AA6408 /* AdviceDataView.swift */; };
+		417A6DA92C4CA65A00AA6408 /* BlockedUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DA82C4CA65A00AA6408 /* BlockedUserDataView.swift */; };
+		417A6DAB2C4CA67A00AA6408 /* ConsultationDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DAA2C4CA67A00AA6408 /* ConsultationDataView.swift */; };
+		417A6DAD2C4CA69400AA6408 /* DiagnosticDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DAC2C4CA69400AA6408 /* DiagnosticDataView.swift */; };
+		417A6DAF2C4CA6AE00AA6408 /* DiseaseDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DAE2C4CA6AE00AA6408 /* DiseaseDataView.swift */; };
+		417A6DB12C4CA6D500AA6408 /* DiseaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DB02C4CA6D500AA6408 /* DiseaseDetailView.swift */; };
+		417A6DB32C4CA6F100AA6408 /* ManageRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DB22C4CA6F100AA6408 /* ManageRuleView.swift */; };
+		417A6DB52C4CA70700AA6408 /* SymptomDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DB42C4CA70700AA6408 /* SymptomDataView.swift */; };
+		417A6DB72C4CA72700AA6408 /* SymptomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DB62C4CA72700AA6408 /* SymptomDetailView.swift */; };
+		417A6DB92C4CA74000AA6408 /* UserManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DB82C4CA74000AA6408 /* UserManagementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +140,18 @@
 		417A6D9C2C4CA49D00AA6408 /* ConsultationPatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationPatientView.swift; sourceTree = "<group>"; };
 		417A6D9E2C4CA4BF00AA6408 /* DiagnosisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
 		417A6DA02C4CA4D800AA6408 /* HomePatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientView.swift; sourceTree = "<group>"; };
+		417A6DA22C4CA5EA00AA6408 /* ActiveUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUserDataView.swift; sourceTree = "<group>"; };
+		417A6DA42C4CA61900AA6408 /* AddRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRuleView.swift; sourceTree = "<group>"; };
+		417A6DA62C4CA63E00AA6408 /* AdviceDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceDataView.swift; sourceTree = "<group>"; };
+		417A6DA82C4CA65A00AA6408 /* BlockedUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedUserDataView.swift; sourceTree = "<group>"; };
+		417A6DAA2C4CA67A00AA6408 /* ConsultationDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationDataView.swift; sourceTree = "<group>"; };
+		417A6DAC2C4CA69400AA6408 /* DiagnosticDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticDataView.swift; sourceTree = "<group>"; };
+		417A6DAE2C4CA6AE00AA6408 /* DiseaseDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseDataView.swift; sourceTree = "<group>"; };
+		417A6DB02C4CA6D500AA6408 /* DiseaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseDetailView.swift; sourceTree = "<group>"; };
+		417A6DB22C4CA6F100AA6408 /* ManageRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRuleView.swift; sourceTree = "<group>"; };
+		417A6DB42C4CA70700AA6408 /* SymptomDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomDataView.swift; sourceTree = "<group>"; };
+		417A6DB62C4CA72700AA6408 /* SymptomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomDetailView.swift; sourceTree = "<group>"; };
+		417A6DB82C4CA74000AA6408 /* UserManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +383,18 @@
 		417A6D7C2C4C072F00AA6408 /* SubAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				417A6DA22C4CA5EA00AA6408 /* ActiveUserDataView.swift */,
+				417A6DA42C4CA61900AA6408 /* AddRuleView.swift */,
+				417A6DA62C4CA63E00AA6408 /* AdviceDataView.swift */,
+				417A6DA82C4CA65A00AA6408 /* BlockedUserDataView.swift */,
+				417A6DAA2C4CA67A00AA6408 /* ConsultationDataView.swift */,
+				417A6DAC2C4CA69400AA6408 /* DiagnosticDataView.swift */,
+				417A6DAE2C4CA6AE00AA6408 /* DiseaseDataView.swift */,
+				417A6DB02C4CA6D500AA6408 /* DiseaseDetailView.swift */,
+				417A6DB22C4CA6F100AA6408 /* ManageRuleView.swift */,
+				417A6DB42C4CA70700AA6408 /* SymptomDataView.swift */,
+				417A6DB62C4CA72700AA6408 /* SymptomDetailView.swift */,
+				417A6DB82C4CA74000AA6408 /* UserManagementView.swift */,
 			);
 			path = SubAdmin;
 			sourceTree = "<group>";
@@ -465,6 +501,7 @@
 				417A6D222C497A6C00AA6408 /* EventModel.swift in Sources */,
 				417A6D5B2C49F4F200AA6408 /* EventService.swift in Sources */,
 				417A6D2E2C49E9CA00AA6408 /* ConsultationVewModel.swift in Sources */,
+				417A6DA32C4CA5EA00AA6408 /* ActiveUserDataView.swift in Sources */,
 				417A6D6E2C4C021B00AA6408 /* CustomInputView.swift in Sources */,
 				417A6D932C4C9E4700AA6408 /* UserDetailView.swift in Sources */,
 				417A6D702C4C024F00AA6408 /* CustomTopBarView.swift in Sources */,
@@ -474,7 +511,10 @@
 				417A6D3C2C49EB2200AA6408 /* SymptomViewModel.swift in Sources */,
 				417A6D5D2C49F51500AA6408 /* ExpertSystemService.swift in Sources */,
 				417A6D9B2C4CA08300AA6408 /* SolutionView.swift in Sources */,
+				417A6DB52C4CA70700AA6408 /* SymptomDataView.swift in Sources */,
+				417A6DB72C4CA72700AA6408 /* SymptomDetailView.swift in Sources */,
 				417A6DA12C4CA4D800AA6408 /* HomePatientView.swift in Sources */,
+				417A6DB32C4CA6F100AA6408 /* ManageRuleView.swift in Sources */,
 				417A6D912C4C9E1C00AA6408 /* UpdateTeleponView.swift in Sources */,
 				417A6D0D2C496CD900AA6408 /* My_KidneyApp.swift in Sources */,
 				417A6D552C49F49D00AA6408 /* ConsultationService.swift in Sources */,
@@ -482,19 +522,24 @@
 				417A6D9D2C4CA49D00AA6408 /* ConsultationPatientView.swift in Sources */,
 				417A6D2C2C49E99C00AA6408 /* AuthViewModel.swift in Sources */,
 				417A6D9F2C4CA4BF00AA6408 /* DiagnosisView.swift in Sources */,
+				417A6DAF2C4CA6AE00AA6408 /* DiseaseDataView.swift in Sources */,
 				417A6D512C49F44C00AA6408 /* AdviceService.swift in Sources */,
 				417A6D282C497AE000AA6408 /* ViewModel.swift in Sources */,
 				417A6D6A2C4ACB9C00AA6408 /* RegisterView.swift in Sources */,
+				417A6DB12C4CA6D500AA6408 /* DiseaseDetailView.swift in Sources */,
 				417A6D992C4CA06700AA6408 /* PatientListView.swift in Sources */,
 				417A6D742C4C029600AA6408 /* LoadingImageView.swift in Sources */,
 				417A6D382C49EACC00AA6408 /* SignInWithAnotherPlatformViewModel.swift in Sources */,
 				417A6D3A2C49EB0300AA6408 /* SymptomQuestionViewModel.swift in Sources */,
+				417A6DB92C4CA74000AA6408 /* UserManagementView.swift in Sources */,
 				417A6D832C4C9C1100AA6408 /* NewsView.swift in Sources */,
 				417A6D7F2C4C9BCB00AA6408 /* AdminSettingsView.swift in Sources */,
 				417A6D322C49EA2F00AA6408 /* DiseaseViewModel.swift in Sources */,
+				417A6DA52C4CA61900AA6408 /* AddRuleView.swift in Sources */,
 				417A6D8F2C4C9DD800AA6408 /* TopNavigationView.swift in Sources */,
 				417A6D2A2C49E89E00AA6408 /* AdviceViewModel.swift in Sources */,
 				417A6D682C4ACB5300AA6408 /* LoginView.swift in Sources */,
+				417A6DA92C4CA65A00AA6408 /* BlockedUserDataView.swift in Sources */,
 				417A6D952C4C9EC400AA6408 /* UserProfileView.swift in Sources */,
 				417A6D892C4C9D7500AA6408 /* ProfileView.swift in Sources */,
 				417A6D972C4CA04F00AA6408 /* ConsultationView.swift in Sources */,
@@ -502,8 +547,11 @@
 				417A6D6C2C4C01FB00AA6408 /* ApplicationUtility.swift in Sources */,
 				417A6D722C4C027800AA6408 /* CustomTabView.swift in Sources */,
 				417A6D532C49F47700AA6408 /* AuthServices.swift in Sources */,
+				417A6DAB2C4CA67A00AA6408 /* ConsultationDataView.swift in Sources */,
+				417A6DAD2C4CA69400AA6408 /* DiagnosticDataView.swift in Sources */,
 				417A6D262C497AB800AA6408 /* RuleModel.swift in Sources */,
 				417A6D592C49F4D600AA6408 /* DiseaseService.swift in Sources */,
+				417A6DA72C4CA63E00AA6408 /* AdviceDataView.swift in Sources */,
 				417A6D362C49EA8A00AA6408 /* LoadViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
