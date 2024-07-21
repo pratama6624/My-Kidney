@@ -106,15 +106,6 @@ class AuthServices {
                     return
                 }
                 
-//                guard let signInResult = signInResult?.user,
-//                      let idToken = signInResult.idToken?.tokenString else {
-//                    completion(.failure(NSError(domain: "Invalid user data", code: -1, userInfo: nil)))
-//                    return
-//                }
-//
-//                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: signInResult.accessToken.tokenString)
-//                completion(.success(credential))
-                
                 guard let user = signInResult?.user else {
                     completion(.failure(NSError(domain: "User not found", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to get user"])))
                     return
