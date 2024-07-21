@@ -174,6 +174,7 @@
 		417A6DCA2C4CA9C800AA6408 /* ProblemTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemTipsView.swift; sourceTree = "<group>"; };
 		417A6DCC2C4CA9E500AA6408 /* QuizAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswersView.swift; sourceTree = "<group>"; };
 		417A6DCE2C4CAA3700AA6408 /* SymptomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomFormView.swift; sourceTree = "<group>"; };
+		417A6DD02C4CB0DD00AA6408 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +197,7 @@
 		417A6D002C496CD900AA6408 = {
 			isa = PBXGroup;
 			children = (
+				417A6DD02C4CB0DD00AA6408 /* README.md */,
 				417A6D0B2C496CD900AA6408 /* My Kidney */,
 				417A6D0A2C496CD900AA6408 /* Products */,
 			);
