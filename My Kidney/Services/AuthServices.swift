@@ -116,21 +116,26 @@ class AuthServices {
     func firebaseLogin(with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(with: credential) { result, error in
             if let error = error {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
                 return
             }
             
             guard let firebaseUser = result?.user else {
-                completion(.failure(NSError(domain: "User not found", code: -1, userInfo: nil)))
+                DispatchQueue.main.async {
+                    completion(.failure(NSError(domain: "User not found", code: -1, userInfo: nil)))
+                }
                 return
             }
             
             Task {
                 do {
-                    let userModel = try await self.saveUserToFirestore(user: firebaseUser, additionalDetails: [:])
-                    completion(.success(userModel))
+                    let _ = try await self.saveUserToFirestore(user: firebaseUser)
                 } catch {
-                    completion(.failure(error))
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
                 }
             }
         }
@@ -143,45 +148,60 @@ class AuthServices {
      login tidak terbaca di AuthViewModel
      */
     
-    func saveUserToFirestore(user: User, additionalDetails: [String: Any]) async throws -> UserModel {
+    func saveUserToFirestore(user: User) async throws {
+        print(user.uid)
         let userRef = Firestore.firestore().collection("users").document(user.uid)
         
-        // Determine the userType and userDetails based on the additionalDetails
-        guard let rule = additionalDetails["rule"] as? String else {
-            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Rule not found in additionalDetails"])
-        }
+        let additionalDetails: [String: Any] = [
+            "fullname": "",
+            "telepon": "",
+            "address": "",
+            "dateOfBirth": "",
+            "diagnosticHistory": [String](),
+            "consultationHistory": [String](),
+            "specialization": "",
+            "licenseNumber": "",
+            "accessStatus": 0,
+            "rule": "admin",
+            "education": "",
+            "graduatingYear": "",
+            "practicePlace": "",
+            "practiceSchedule": [String: String](),
+            "photoURL": "",
+            "providerId": ""
+        ]
         
-        let userType: UserType
-        let userDetails: UserDetails
+        print("1. Tracking error area")
+        
+        print("additional ada isinya: \(additionalDetails)")
+        
+        // Wrong Area
+        // Determine the userType and userDetails based on the additionalDetails
+//        guard let rule = additionalDetails["rule"] as? String else {
+//            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Rule not found in additionalDetails"])
+//        }
+        
+        // Rule sementara kita bisa hardcode dulu
+        let rule = "admin"
+        
+        var userType: UserType
         
         switch rule {
         case "admin":
-            guard let adminDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let admin = try? JSONDecoder().decode(Admin.self, from: adminDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode admin details"])
-            }
             userType = .admin
-            userDetails = .admin(admin)
+            print("4. Tracking error area")
             
         case "patient":
-            guard let patientDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let patient = try? JSONDecoder().decode(Patient.self, from: patientDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode patient details"])
-            }
             userType = .patient
-            userDetails = .patient(patient)
             
         case "doctor":
-            guard let doctorDetails = try? JSONSerialization.data(withJSONObject: additionalDetails),
-                  let doctor = try? JSONDecoder().decode(Doctor.self, from: doctorDetails) else {
-                throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to decode doctor details"])
-            }
             userType = .doctor
-            userDetails = .doctor(doctor)
             
         default:
             throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown rule type"])
         }
+        
+        print("6. Tracking error area")
         
         // Prepare data to be saved
         let userData: [String: Any] = [
@@ -191,15 +211,13 @@ class AuthServices {
         ]
         
         // Save data to Firestore
-        try await userRef.setData(userData)
-        
-        // Return the UserModel
-        return UserModel(
-            id: user.uid,
-            email: user.email ?? "",
-            userType: userType,
-            userDetails: userDetails
-        )
+        do {
+            try await userRef.setData(userData)
+            print("DEBUG: User data saved to Firestore.")
+        } catch {
+            print("DEBUG: Failed to save user data to Firestore with error: \(error.localizedDescription)")
+            throw error
+        }
     }
 }
 
