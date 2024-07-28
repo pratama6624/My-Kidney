@@ -88,8 +88,7 @@ To get started with the Kidney Disease Diagnosis System project, follow these st
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/yourusername/kidney-disease-diagnosis.git
-cd kidney-disease-diagnosis
+https://github.com/pratama6624/My-Kidney.git
 ```
 
 ### 2. Install Dependencies
