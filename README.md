@@ -1,5 +1,7 @@
 # Kidney Disease Diagnosis System Based on iOS (Swift + Google Firebase)
 
+This repository contains the source code for an iOS-based expert system that assists in diagnosing kidney diseases. The system uses forward chaining for decision-making and follows the Spiral model for iterative development. The application is built using Swift and Google Firebase, employing the MVVM design pattern.
+
 ## Overview
 
 This project aims to develop an expert system for diagnosing kidney diseases using iOS, Swift, and Google Firebase. The system utilizes forward chaining as the decision-making method and follows the Spiral model for application development.
@@ -46,20 +48,7 @@ Developing an iOS-based expert system application to diagnose kidney diseases us
 | Diabetic Nephropathy | Swelling in ankles, feet, or hands, high blood pressure, foamy urine, unintended weight loss | Blood sugar control, blood pressure management, transplant |
 | Hypertensive Nephropathy | High blood pressure hard to control, swelling in legs and ankles, fatigue, headaches | Regular check-ups, blood pressure management |
 
-### 3. Application Development with Swift
-
-- **UI/UX:**
-  - **Authentication:**
-    - Register (Patient, Medical Personnel, Admin)
-    - Login and Forgot Password
-  - **Navigation:**
-    - Before Login: Home (kidney education), Register
-    - After Login:
-      - **Patient:** Home, Diagnosis, History, Profile, Settings
-      - **Medical Personnel:** Home, Patient List, Consultation, Profile, Settings
-      - **Admin:** Home, User Management, Reports, Profile, Settings
-
-### 4. Building the Database with Google Firebase
+### 3. Building the Database with Google Firebase
 
 - **Required Collections:**
   - **Users Collection:** Stores user data.
@@ -70,7 +59,7 @@ Developing an iOS-based expert system application to diagnose kidney diseases us
   - **Suggestions Collection:** Stores suggestions or solutions for each disease.
   - **UserDiseases Collection:** Stores diagnosis history for users.
 
-### 5. Development and Testing
+### 4. Development and Testing
 
 - **Start Development:** Proceed with application development by implementing the designed features.
 - **Testing:** Conduct continuous and iterative testing following the Spiral model to ensure application quality.
@@ -90,6 +79,40 @@ Developing an iOS-based expert system application to diagnose kidney diseases us
 - **Design Pattern:** MVVM
 - **Development Method:** Spiral
 
-## Good Luck
+## Getting Started
 
-Good luck with the development of this expert system application. If you have any questions or need further guidance, feel free to ask!
+To get started with the Kidney Disease Diagnosis System project, follow these steps:
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/yourusername/kidney-disease-diagnosis.git
+cd kidney-disease-diagnosis
+```
+
+### 2. Install Dependencies
+
+Ensure you have Xcode and CocoaPods installed. Then, install the project dependencies by running:
+
+```bash
+pod install
+```
+
+### 3. Open the Project
+
+Open the .xcworkspace file in Xcode:
+open KidneyDiseaseDiagnosis.xcworkspace
+
+### 4. Configure Firebase
+
+Add your GoogleService-Info.plist file to the project. This file is essential for Firebase integration and should be placed in the root of your Xcode project.
+
+### 5. Run the Project
+
+Select a simulator or connect a physical device in Xcode. Then, click the run button to build and run the application.
+
+## For Me
+
+Good luck in developing this expert system application.
