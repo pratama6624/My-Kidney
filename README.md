@@ -77,7 +77,7 @@ Developing an iOS-based expert system application to diagnose kidney diseases us
 - **Framework:** UIKit or SwiftUI
 - **Backend:** Google Firebase (Firestore, Authentication)
 - **Design Pattern:** MVVM
-- **Development Method:** Spiral
+- **Development Method:** Spiral 
 
 ## Getting Started
 

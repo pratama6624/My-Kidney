@@ -113,7 +113,7 @@ class AuthServices {
             }
     }
     
-    func firebaseLogin(with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
+    func firebaseLogin(userrule: String, with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(with: credential) { result, error in
             if let error = error {
                 DispatchQueue.main.async {
@@ -131,7 +131,7 @@ class AuthServices {
             
             Task {
                 do {
-                    let _ = try await self.saveUserToFirestore(user: firebaseUser)
+                    let _ = try await self.saveUserToFirestore(userrule: userrule, user: firebaseUser)
                 } catch {
                     DispatchQueue.main.async {
                         completion(.failure(error))
@@ -148,13 +148,12 @@ class AuthServices {
      login tidak terbaca di AuthViewModel
      */
     
-    func saveUserToFirestore(user: User) async throws {
-        print(user.uid)
+    func saveUserToFirestore(userrule: String, user: User) async throws {
         let userRef = Firestore.firestore().collection("users").document(user.uid)
         
         let additionalDetails: [String: Any] = [
-            "fullname": "",
-            "telepon": "",
+            "fullname": user.displayName ?? "",
+            "telepon": user.phoneNumber ?? "",
             "address": "",
             "dateOfBirth": "",
             "diagnosticHistory": [String](),
@@ -162,12 +161,12 @@ class AuthServices {
             "specialization": "",
             "licenseNumber": "",
             "accessStatus": 0,
-            "rule": "admin",
+            "rule": userrule,
             "education": "",
             "graduatingYear": "",
             "practicePlace": "",
             "practiceSchedule": [String: String](),
-            "photoURL": "",
+            "photoURL": user.photoURL?.absoluteString ?? "",
             "providerId": ""
         ]
         

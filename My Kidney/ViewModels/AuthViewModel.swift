@@ -109,13 +109,13 @@ class AuthViewModel: ObservableObject {
     }
     
     // Sign in with Google
-    func signInWithGoogle() {
+    func signInWithGoogle(userrule: String) {
         AuthServices.shared.signInWithGoogle { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let user):
                     self?.isLoginSuccess = true
-                    AuthServices.shared.firebaseLogin(with: GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)) { result in
+                    AuthServices.shared.firebaseLogin(userrule: userrule, with: GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)) { result in
                         switch result {
                         case .success(let user):
                             self?.currentUser = user
