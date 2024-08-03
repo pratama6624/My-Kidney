@@ -54,7 +54,7 @@ struct SettingsView: View {
                                 Image(systemName: "phone")
                                     .frame(width: 30)
                                 
-                                switch authViewModel.currentUser?.userDetails {
+                                switch SessionManager.shared.currentUser?.userDetails {
                                 case .admin(let admin):
                                     if let telepon = admin.telepon {
                                         Text(telepon)

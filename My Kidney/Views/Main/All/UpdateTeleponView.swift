@@ -32,7 +32,7 @@ struct UpdateTeleponView: View {
                     
                     Button {
                         Task {
-                            await authViewModel.updatePhoneNumber(userID: authViewModel.currentUser!.id ?? "")
+                            await authViewModel.updatePhoneNumber(userID: SessionManager.shared.currentUser!.id ?? "")
                                 authViewModel.showUpdateTeleponView = false
                         }
                     } label: {

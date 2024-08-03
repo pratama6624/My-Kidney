@@ -19,8 +19,8 @@ protocol AuthFormProtocol {
 @MainActor
 class AuthViewModel: ObservableObject {
     private var loadViewModel = LoadViewModel()
-    @Published var userSession: Firebase.User?
-    @Published var currentUser: UserModel?
+//    @Published var userSession: Firebase.User?
+//    @Published var currentUser: UserModel?
     
     // For Login || Register
     @Published var email: String = ""
@@ -62,7 +62,7 @@ class AuthViewModel: ObservableObject {
     @Published var newPhoneNumber: String = ""
     
     init() {
-        self.userSession = Auth.auth().currentUser
+        SessionManager.shared.userSession = Auth.auth().currentUser
         
         Task {
             await fetchUser()
@@ -96,7 +96,7 @@ class AuthViewModel: ObservableObject {
     
     func login() async throws {
         do {
-            self.userSession = try await AuthServices.shared.login(withEmail: email, password: password)
+            SessionManager.shared.userSession = try await AuthServices.shared.login(withEmail: email, password: password)
             await fetchUser()
             self.resetProperty()
             self.errorMessage = ""
@@ -118,18 +118,29 @@ class AuthViewModel: ObservableObject {
                     AuthServices.shared.firebaseLogin(userrule: userrule, with: GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)) { result in
                         switch result {
                         case .success(let user):
-                            self?.currentUser = user
+                            print("DEBUG: Success")
+                            SessionManager.shared.userSession = Auth.auth().currentUser
+                            Task {
+                                SessionManager.shared.currentUser = try? await SessionManager.shared.fetchUser()
+                            }
                         case .failure(let error):
                             self?.errorMessage = error.localizedDescription
                         }
                     }
-                    print("User signed in: \(result)")
                 case .failure(let error):
                     self?.isLoginSuccess = false
                     self?.errorMessage = error.localizedDescription
                     print("Error signing in: \(error.localizedDescription)")
                 }
             }
+        }
+    }
+    
+    func checkCurrentUser() {
+        if let user = Auth.auth().currentUser {
+            print("User already signed in: \(user.uid)")
+        } else {
+            print("No user signed")
         }
     }
     
@@ -164,7 +175,7 @@ class AuthViewModel: ObservableObject {
                 "providerId": providerId
             ]
             
-            self.userSession = try await AuthServices.shared.register(withEmail: email, fullname: fullname, password: password, userType: userType, additionalDetails: additionalDetails)
+            SessionManager.shared.userSession = try await AuthServices.shared.register(withEmail: email, fullname: fullname, password: password, userType: userType, additionalDetails: additionalDetails)
             await self.fetchUser()
             self.resetProperty()
             await self.logout()
@@ -176,8 +187,8 @@ class AuthViewModel: ObservableObject {
     func logout() async {
         do {
             try AuthServices.shared.logout()
-            self.userSession = nil
-            self.currentUser = nil
+            SessionManager.shared.userSession = nil
+            SessionManager.shared.currentUser = nil
         } catch {
             print("DEBUG: Failed to logout with error \(error.localizedDescription)")
         }
@@ -189,7 +200,7 @@ class AuthViewModel: ObservableObject {
     
     func fetchUser() async {
         do {
-            self.currentUser = try await AuthServices.shared.fetchUser()
+            SessionManager.shared.currentUser = try await SessionManager.shared.fetchUser()
             print("DEBUG: Fetch user successfully")
         } catch {
             print("DEBUG: ViewModel failed to fetch user with error \(error.localizedDescription)")
@@ -222,16 +233,16 @@ class AuthViewModel: ObservableObject {
     }
     
     private func updateUIPhoneNumber() {
-        switch self.currentUser?.userDetails {
+        switch SessionManager.shared.currentUser?.userDetails {
         case .admin(var admin):
             admin.telepon = self.newPhoneNumber
-            self.currentUser?.userDetails = .admin(admin)
+            SessionManager.shared.currentUser?.userDetails = .admin(admin)
         case .patient(var patient):
             patient.telepon = self.newPhoneNumber
-            self.currentUser?.userDetails = .patient(patient)
+            SessionManager.shared.currentUser?.userDetails = .patient(patient)
         case .doctor(var doctor):
             doctor.telepon = self.newPhoneNumber
-            self.currentUser?.userDetails = .doctor(doctor)
+            SessionManager.shared.currentUser?.userDetails = .doctor(doctor)
         case .none:
             break
         }

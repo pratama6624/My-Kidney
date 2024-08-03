@@ -93,6 +93,7 @@
 		417A6DD22C4CB61900AA6408 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD12C4CB61900AA6408 /* Extensions.swift */; };
 		417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */; };
 		417A6DD82C4CDA4A00AA6408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */; };
+		41F9BEEE2C5A8A4F00D8ED47 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +180,7 @@
 		417A6DD12C4CB61900AA6408 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewHeightPreferenceKey.swift; sourceTree = "<group>"; };
 		417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Expert System/Forward Chaining/Sistem Pakar Penyakit Ginjal/Sistem Pakar Penyakit Ginjal/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				417A6D5C2C49F51500AA6408 /* ExpertSystemService.swift */,
 				417A6D5E2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift */,
 				417A6D602C49F59800AA6408 /* SymptomService.swift */,
+				41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				417A6D5F2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift in Sources */,
 				417A6D9D2C4CA49D00AA6408 /* ConsultationPatientView.swift in Sources */,
 				417A6DCF2C4CAA3700AA6408 /* SymptomFormView.swift in Sources */,
+				41F9BEEE2C5A8A4F00D8ED47 /* SessionManager.swift in Sources */,
 				417A6D2C2C49E99C00AA6408 /* AuthViewModel.swift in Sources */,
 				417A6D9F2C4CA4BF00AA6408 /* DiagnosisView.swift in Sources */,
 				417A6DAF2C4CA6AE00AA6408 /* DiseaseDataView.swift in Sources */,

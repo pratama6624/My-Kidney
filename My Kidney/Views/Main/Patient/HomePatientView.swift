@@ -28,7 +28,7 @@ struct HomePatientView: View {
                             .padding(.bottom, 30)
                             .cornerRadius(10)
                         
-                        Text("Halo \(authViewModel.currentUser?.fullname ?? ""), selamat datang ")
+                        Text("Halo \(SessionManager.shared.currentUser?.fullname ?? ""), selamat datang ")
                             .font(.title3)
                             .fontWeight(.bold)
                             .padding(.bottom, 5)

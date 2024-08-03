@@ -46,7 +46,7 @@ struct UserDetailView: View {
                     
                     Spacer()
                     
-                    if user.isDoctor && authViewModel.currentUser?.userType == .patient {
+                    if user.isDoctor && SessionManager.shared.currentUser?.userType == .patient {
                         Image(systemName: "ellipsis.message.fill")
                             .resizable()
                             .scaledToFit()

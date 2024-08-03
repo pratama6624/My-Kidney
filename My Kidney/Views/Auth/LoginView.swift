@@ -93,7 +93,7 @@ struct LoginView: View {
                             
                             HStack(spacing: 30) {
                                 Button {
-                                    // Skip aja dulu (harus join Apple Developer Program 1,5 juta / Year)
+                                    // Skip aja dulu (harus join Apple Developer Program 1,6 juta / Year)
                                     // authWithAppleID.handleSignInWithApple()
                                 } label: {
                                     HStack {
@@ -128,12 +128,15 @@ struct LoginView: View {
                                         title: Text("Pilih Rule"),
                                         message: Text("Silahkan pilih peran anda"),
                                         primaryButton: .default(Text("Pasien"), action: {
-                                            authViewModel.signInWithGoogle(userrule: "pasien")
+                                            authViewModel.signInWithGoogle(userrule: "patient")
                                         }),
                                         secondaryButton: .default(Text("Dokter"), action: {
-                                            authViewModel.signInWithGoogle(userrule: "dokter")
+                                            authViewModel.signInWithGoogle(userrule: "doctor")
                                         })
                                     )
+                                }
+                                .onAppear {
+                                    authViewModel.checkCurrentUser()
                                 }
                                 
                                 HStack {

@@ -17,6 +17,11 @@ class AuthServices {
     
     private init() {}
     
+    func userExistsInFirestore(uid: String) async throws -> Bool {
+        let document = try await db.collection(collectionName).document(uid).getDocument()
+        return document.exists
+    }
+    
     func login(withEmail email: String, password: String) async throws -> Firebase.User {
         let result = try await Auth.auth().signIn(withEmail: email, password: password)
         return result.user
@@ -32,26 +37,6 @@ class AuthServices {
     
     func logout() throws {
         try Auth.auth().signOut()
-    }
-    
-    func fetchUser() async throws -> UserModel? {
-        guard let uid = Auth.auth().currentUser?.uid else {
-            print("DEBUG: No User ID Found")
-            return nil
-        }
-        do {
-            let snapshot = try await db.collection(collectionName).document(uid).getDocument()
-            guard snapshot.exists else {
-                print("DEBUG: Document does not exist")
-                return nil
-            }
-            
-            let userData = try snapshot.data(as: UserModel.self)
-            return userData
-        } catch {
-            print("DEBUG: Service failed to fetch data with error \(error.localizedDescription)")
-            return nil
-        }
     }
     
     func fetchUsersByRule(rule: String, pageSize: Int, lastDocument: DocumentSnapshot? = nil) async throws -> ([UserModel], DocumentSnapshot?) {
@@ -129,9 +114,25 @@ class AuthServices {
                 return
             }
             
+            print("Firebase user track area 1: \(firebaseUser.uid)")
+            
             Task {
                 do {
-                    let _ = try await self.saveUserToFirestore(userrule: userrule, user: firebaseUser)
+                    let userExists = try await self.userExistsInFirestore(uid: firebaseUser.uid)
+                    
+                    if !userExists {
+                        print("save user is running")
+                        let _ = try await self.saveUserToFirestore(userrule: userrule, user: firebaseUser)
+                    }
+                    
+                    let currentUser = try await SessionManager.shared.fetchUser()
+                    
+                    DispatchQueue.main.async {
+                        print("area of set session is running")
+                        SessionManager.shared.userSession = firebaseUser
+                        SessionManager.shared.currentUser = currentUser
+                        completion(.success(currentUser!))
+                    }
                 } catch {
                     DispatchQueue.main.async {
                         completion(.failure(error))
@@ -181,26 +182,26 @@ class AuthServices {
 //        }
         
         // Rule sementara kita bisa hardcode dulu
-        let rule = "admin"
+        let rule = userrule
         
         var userType: UserType
         
         switch rule {
         case "admin":
             userType = .admin
-            print("4. Tracking error area")
+            print("area case admin")
             
         case "patient":
             userType = .patient
+            print("area case patient")
             
         case "doctor":
             userType = .doctor
+            print("area case doctor")
             
         default:
             throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown rule type"])
         }
-        
-        print("6. Tracking error area")
         
         // Prepare data to be saved
         let userData: [String: Any] = [
