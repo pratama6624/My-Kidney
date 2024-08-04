@@ -17,11 +17,6 @@ class AuthServices {
     
     private init() {}
     
-    func userExistsInFirestore(uid: String) async throws -> Bool {
-        let document = try await db.collection(collectionName).document(uid).getDocument()
-        return document.exists
-    }
-    
     func login(withEmail email: String, password: String) async throws -> Firebase.User {
         let result = try await Auth.auth().signIn(withEmail: email, password: password)
         return result.user
@@ -98,7 +93,7 @@ class AuthServices {
             }
     }
     
-    func firebaseLogin(userrule: String, with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
+    func firebaseLogin(userrule: String? = nil, with credential: AuthCredential, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(with: credential) { result, error in
             if let error = error {
                 DispatchQueue.main.async {
@@ -114,21 +109,24 @@ class AuthServices {
                 return
             }
             
-            print("Firebase user track area 1: \(firebaseUser.uid)")
-            
             Task {
                 do {
-                    let userExists = try await self.userExistsInFirestore(uid: firebaseUser.uid)
+                    let userExists = try await SessionManager.shared.userExistsInFirestore(uid: firebaseUser.uid)
                     
                     if !userExists {
-                        print("save user is running")
-                        let _ = try await self.saveUserToFirestore(userrule: userrule, user: firebaseUser)
+                        if let userrule = userrule {
+                            try await self.saveUserToFirestore(userrule: userrule, user: firebaseUser)
+                        } else {
+                            DispatchQueue.main.async {
+                                completion(.failure(NSError(domain: "User does not exist in the database", code: -1, userInfo: nil)))
+                            }
+                            return
+                        }
                     }
                     
                     let currentUser = try await SessionManager.shared.fetchUser()
                     
                     DispatchQueue.main.async {
-                        print("area of set session is running")
                         SessionManager.shared.userSession = firebaseUser
                         SessionManager.shared.currentUser = currentUser
                         completion(.success(currentUser!))
@@ -175,30 +173,14 @@ class AuthServices {
         
         print("additional ada isinya: \(additionalDetails)")
         
-        // Wrong Area
-        // Determine the userType and userDetails based on the additionalDetails
-//        guard let rule = additionalDetails["rule"] as? String else {
-//            throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Rule not found in additionalDetails"])
-//        }
-        
-        // Rule sementara kita bisa hardcode dulu
         let rule = userrule
         
         var userType: UserType
         
         switch rule {
-        case "admin":
-            userType = .admin
-            print("area case admin")
-            
-        case "patient":
-            userType = .patient
-            print("area case patient")
-            
-        case "doctor":
-            userType = .doctor
-            print("area case doctor")
-            
+        case "admin": userType = .admin
+        case "patient": userType = .patient
+        case "doctor": userType = .doctor
         default:
             throw NSError(domain: "Invalid user data", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown rule type"])
         }

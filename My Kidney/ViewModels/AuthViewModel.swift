@@ -25,9 +25,11 @@ class AuthViewModel: ObservableObject {
     // For Login || Register
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var googleCredential: AuthCredential?
     
     // For sign in with Google
     @Published var isLoginSuccess: Bool = false
+    @Published var showRoleSelectionAlert: Bool = false
     
     // Message
     @Published var showErrorMessage: Bool = false
@@ -109,21 +111,20 @@ class AuthViewModel: ObservableObject {
     }
     
     // Sign in with Google
-    func signInWithGoogle(userrule: String) {
+    func signInWithGoogle() {
         AuthServices.shared.signInWithGoogle { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let user):
                     self?.isLoginSuccess = true
-                    AuthServices.shared.firebaseLogin(userrule: userrule, with: GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)) { result in
+                    let credential = GoogleAuthProvider.credential(withIDToken: user.idToken?.tokenString ?? "", accessToken: user.accessToken.tokenString)
+                    self?.googleCredential = credential
+                    AuthServices.shared.firebaseLogin(with: credential) { result in
                         switch result {
-                        case .success(let user):
-                            print("DEBUG: Success")
-                            SessionManager.shared.userSession = Auth.auth().currentUser
-                            Task {
-                                SessionManager.shared.currentUser = try? await SessionManager.shared.fetchUser()
-                            }
+                        case .success(let userModel):
+                            self?.handleUserLogin(userModel: userModel)
                         case .failure(let error):
+                            self?.showRoleSelectionAlert = true
                             self?.errorMessage = error.localizedDescription
                         }
                     }
@@ -132,6 +133,24 @@ class AuthViewModel: ObservableObject {
                     self?.errorMessage = error.localizedDescription
                     print("Error signing in: \(error.localizedDescription)")
                 }
+            }
+        }
+    }
+    
+    private func handleUserLogin(userModel: UserModel) {
+        SessionManager.shared.userSession = Auth.auth().currentUser
+        SessionManager.shared.currentUser = userModel
+    }
+    
+    func finalizeGoogleSignIn(userrule: String) {
+        guard let credential = googleCredential else { return }
+        
+        AuthServices.shared.firebaseLogin(userrule: userrule, with: credential) { [weak self] result in
+            switch result {
+            case .success(let user):
+                self?.handleUserLogin(userModel: user)
+            case .failure(let error):
+                self?.errorMessage = error.localizedDescription
             }
         }
     }

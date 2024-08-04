@@ -58,4 +58,9 @@ class SessionManager: ObservableObject {
             return nil
         }
     }
+    
+    func userExistsInFirestore(uid: String) async throws -> Bool {
+        let documnet = try await db.collection(collectionName).document(uid).getDocument()
+        return documnet.exists
+    }
 }

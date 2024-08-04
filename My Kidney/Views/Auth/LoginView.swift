@@ -10,7 +10,6 @@ import GoogleSignIn
 import GoogleSignInSwift
 
 struct LoginView: View {
-    @State private var showAlert = false
     @EnvironmentObject var authViewModel: AuthViewModel
     @StateObject var loadViewModel = LoadViewModel()
     @AppStorage ("log_Status") private var logStatus: Bool = false
@@ -109,8 +108,7 @@ struct LoginView: View {
                                 }
                                 
                                 Button {
-                                    showAlert = true
-//                                    authViewModel.signInWithGoogle()
+                                    authViewModel.signInWithGoogle()
                                 } label: {
                                     HStack {
                                         Image(systemName: "g.square.fill")
@@ -123,15 +121,15 @@ struct LoginView: View {
                                     .cornerRadius(5)
                                     .foregroundStyle(Color.white)
                                 }
-                                .alert(isPresented: $showAlert) {
+                                .alert(isPresented: $authViewModel.showRoleSelectionAlert) {
                                     Alert(
                                         title: Text("Pilih Rule"),
                                         message: Text("Silahkan pilih peran anda"),
                                         primaryButton: .default(Text("Pasien"), action: {
-                                            authViewModel.signInWithGoogle(userrule: "patient")
+                                            authViewModel.finalizeGoogleSignIn(userrule: "patient")
                                         }),
                                         secondaryButton: .default(Text("Dokter"), action: {
-                                            authViewModel.signInWithGoogle(userrule: "doctor")
+                                            authViewModel.finalizeGoogleSignIn(userrule: "doctor")
                                         })
                                     )
                                 }
