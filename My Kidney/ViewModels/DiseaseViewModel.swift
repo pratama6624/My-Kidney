@@ -64,7 +64,7 @@ class DiseaseViewModel: ObservableObject {
     }
 }
 
-extension DiseaseViewModel: DiseaseFormProtocol {
+extension DiseaseViewModel: @preconcurrency DiseaseFormProtocol {
     var diseaseFormIsValid: Bool {
         return !disease.isEmpty
         && !description.isEmpty

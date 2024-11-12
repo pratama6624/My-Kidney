@@ -277,7 +277,7 @@ extension String {
     }
 }
 
-extension AuthViewModel: AuthFormProtocol {
+extension AuthViewModel: @preconcurrency AuthFormProtocol {
     var loginFormIsValid: Bool {
         return !email.isEmpty
         && email.contains("@")

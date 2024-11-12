@@ -69,7 +69,7 @@ class SymptomViewModel: ObservableObject {
     }
 }
 
-extension SymptomViewModel: SymptomFormProtocol {
+extension SymptomViewModel: @preconcurrency SymptomFormProtocol {
     var formIsValid: Bool {
         return !fatigue.isEmpty
         && !description.isEmpty
