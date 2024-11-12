@@ -115,3 +115,7 @@ Select a simulator or connect a physical device in Xcode. Then, click the run bu
 ## For Me
 
 Good luck in developing this expert system application.
+
+## Preview On IPhone
+
+<img width="1139" alt="Screenshot 2024-10-30 at 11 04 53 PM" src="https://github.com/user-attachments/assets/e86cd504-9141-4e9c-8885-d8d5ea7420af">
