@@ -93,10 +93,12 @@
 		417A6DD22C4CB61900AA6408 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD12C4CB61900AA6408 /* Extensions.swift */; };
 		417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */; };
 		417A6DD82C4CDA4A00AA6408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */; };
+		418DD79C2E3EFF3000933576 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418DD79B2E3EFF3000933576 /* AuthController.swift */; };
 		41F9BEEE2C5A8A4F00D8ED47 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4105F6C12EAE659900B936B1 /* DETAIL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DETAIL.md; sourceTree = "<group>"; };
 		417A6D092C496CD900AA6408 /* My Kidney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Kidney.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		417A6D0C2C496CD900AA6408 /* My_KidneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_KidneyApp.swift; sourceTree = "<group>"; };
 		417A6D0E2C496CD900AA6408 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		417A6DD12C4CB61900AA6408 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		417A6DD32C4CB62F00AA6408 /* TextViewHeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewHeightPreferenceKey.swift; sourceTree = "<group>"; };
 		417A6DD72C4CDA4A00AA6408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../../../../Expert System/Forward Chaining/Sistem Pakar Penyakit Ginjal/Sistem Pakar Penyakit Ginjal/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		418DD79B2E3EFF3000933576 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +206,7 @@
 		417A6D002C496CD900AA6408 = {
 			isa = PBXGroup;
 			children = (
+				4105F6C12EAE659900B936B1 /* DETAIL.md */,
 				417A6DD02C4CB0DD00AA6408 /* README.md */,
 				417A6D0B2C496CD900AA6408 /* My Kidney */,
 				417A6D0A2C496CD900AA6408 /* Products */,
@@ -293,6 +297,7 @@
 				417A6D5E2C49F53200AA6408 /* SignInWithAnotherPlatformService.swift */,
 				417A6D602C49F59800AA6408 /* SymptomService.swift */,
 				41F9BEED2C5A8A4F00D8ED47 /* SessionManager.swift */,
+				418DD79B2E3EFF3000933576 /* AuthController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417A6D872C4C9D2200AA6408 /* AppInfoData.swift in Sources */,
+				418DD79C2E3EFF3000933576 /* AuthController.swift in Sources */,
 				417A6D242C497A9400AA6408 /* ExpertSystemModel.swift in Sources */,
 				417A6D342C49EA5800AA6408 /* EventViewModel.swift in Sources */,
 				417A6DD42C4CB63000AA6408 /* TextViewHeightPreferenceKey.swift in Sources */,
