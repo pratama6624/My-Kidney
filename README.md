@@ -23,4 +23,3 @@ This app guides users through selecting symptoms, then provides a **possible dia
 ----
 
 <img width="737" alt="Screenshot 2024-10-30 at 11 04 53 PM" src="https://github.com/user-attachments/assets/e86cd504-9141-4e9c-8885-d8d5ea7420af">
->>>>>>> 13c127f (Fix Image Detail)
