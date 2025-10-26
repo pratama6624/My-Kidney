@@ -16,6 +16,8 @@ This app guides users through selecting symptoms, then provides a **possible dia
 - **Database:** Google Firebase (Firestore + Auth)  
 - **Goal:** Assist early detection and awareness of kidney-related diseases
 
+## [Detail (Detailed Overview)](./DETAIL.md)
+
 ## Preview On IPhone
 
 <img width="737" height="506" alt="Image" src="https://github.com/user-attachments/assets/97e51cbf-eeac-448b-a442-d5ef89431734" />
