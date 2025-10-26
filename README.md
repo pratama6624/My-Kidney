@@ -18,10 +18,6 @@ This app guides users through selecting symptoms, then provides a **possible dia
 
 ## Preview On IPhone
 
-<<<<<<< HEAD
-<img width="1000" height="506" alt="Image" src="https://github.com/user-attachments/assets/97e51cbf-eeac-448b-a442-d5ef89431734" />
-<img width="1000" alt="Screenshot 2024-10-30 at 11 04 53 PM" src="https://github.com/user-attachments/assets/e86cd504-9141-4e9c-8885-d8d5ea7420af">
-=======
 <img width="737" height="506" alt="Image" src="https://github.com/user-attachments/assets/97e51cbf-eeac-448b-a442-d5ef89431734" />
 
 ----
